@@ -64,40 +64,50 @@ const courses = [
 
 const courseContainer = document.getElementById('course-list');
 const totalCreditsDisplay = document.getElementById('total-credits');
+const filterButtons = document.querySelectorAll('.filter-buttons button');
 
-// Function to render courses
+// Highlight the filter button that is currently applied
+function setActiveButton(activeId) {
+    filterButtons.forEach(button => {
+        button.classList.toggle('active', button.id === activeId);
+    });
+}
+
+// Build the course cards and the credit total for whatever list is passed in
 function renderCourses(courseList) {
-    courseContainer.innerHTML = ''; // Clear container
-    
+    courseContainer.innerHTML = '';
+
     courseList.forEach(course => {
         const badge = document.createElement('div');
         badge.classList.add('course-badge');
         if (course.completed) {
             badge.classList.add('completed');
         }
-        badge.innerHTML = `${course.subject} ${course.number}`;
+        badge.textContent = `${course.subject} ${course.number}`;
+        badge.title = `${course.title} — ${course.credits} credits`;
         courseContainer.appendChild(badge);
     });
 
-    // Calculate total credits using reduce()
-    const totalCredits = courseList.reduce((acc, course) => acc + course.credits, 0);
+    // Total credits for the courses currently displayed, using reduce()
+    const totalCredits = courseList.reduce((total, course) => total + course.credits, 0);
     totalCreditsDisplay.innerHTML = `Total Credits: <strong>${totalCredits}</strong>`;
 }
 
-// Event Listeners for Filters
+// Filter buttons
 document.getElementById('btn-all').addEventListener('click', () => {
     renderCourses(courses);
+    setActiveButton('btn-all');
 });
 
 document.getElementById('btn-cse').addEventListener('click', () => {
-    const cseCourses = courses.filter(course => course.subject === 'CSE');
-    renderCourses(cseCourses);
+    renderCourses(courses.filter(course => course.subject === 'CSE'));
+    setActiveButton('btn-cse');
 });
 
 document.getElementById('btn-wdd').addEventListener('click', () => {
-    const wddCourses = courses.filter(course => course.subject === 'WDD');
-    renderCourses(wddCourses);
+    renderCourses(courses.filter(course => course.subject === 'WDD'));
+    setActiveButton('btn-wdd');
 });
 
-// Initial Render
+// Initial render shows every course
 renderCourses(courses);
