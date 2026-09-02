@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduarjose Nazareth Fajardo - WDD 231 - Course Home Page</title>
+    <meta name="description" content="WDD 231 Course Home Page for Eduarjose Nazareth Fajardo, Telecom Engineer and Backend Developer.">
+    <meta name="author" content="Eduarjose Nazareth Fajardo">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Você pode usar um emoji ou SVG como logo. Aqui uso um SVG inline simples -->
+            <svg class="logo" width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 22h20L12 2z"/>
+            </svg>
+            <span>Eduarjose Nazareth Fajardo</span>
+        </div>
+        <button id="menu-button" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="project/index.html">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Course Home Page</h1>
+        <div class="grid-container">
+            
+            <section class="card about-card">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Hello! I am Eduarjose, a Telecom & Omnichannel Solutions Engineer and Backend Developer based in Brazil. I specialize in Node.js, TypeScript, and VoIP infrastructure. I am excited to improve my frontend skills in this course.</p>
+                    <img src="images/profile.jpg" alt="Eduarjose Fajardo Profile" width="150" height="200" loading="lazy">
+                </div>
+            </section>
+
+            <section class="card location-card">
+                <h2>Valinhos, Brazil</h2>
+                <p>Valinhos is a municipality in the state of São Paulo, famous for its purple figs and its role as a technological hub in the Campinas metropolitan region.</p>
+            </section>
+
+            <section class="card certificate-card">
+                <h2>Web and Computer Programming Certificate</h2>
+                <div class="filter-buttons">
+                    <button id="btn-all">All</button>
+                    <button id="btn-cse">CSE</button>
+                    <button id="btn-wdd">WDD</button>
+                </div>
+                <!-- Cursos renderizados via JS entrarão aqui -->
+                <div id="course-list" class="courses"></div>
+                <!-- Créditos totais calculados via JS (reduce) -->
+                <p id="total-credits" class="credits-display"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/Eduarjn" target="_blank" aria-label="GitHub Profile">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/eduarjose-fajardo" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> 🌺 Eduarjose Nazareth Fajardo 🌺 Valinhos, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

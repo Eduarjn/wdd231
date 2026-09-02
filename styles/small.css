@@ -1,0 +1,191 @@
+:root {
+    --primary: #003366;
+    --secondary: #4a4a4a;
+    --accent: #ffcc00;
+    --bg-light: #f4f4f9;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* Header & Hamburger */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navigation - Mobile (Hidden by default) */
+nav {
+    background-color: var(--secondary);
+}
+
+#menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+
+#menu.open {
+    display: flex; /* Classes ativadas pelo JS */
+}
+
+#menu li a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#menu li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Wayfinding - Active Link */
+#menu li a.active {
+    background-color: var(--primary);
+    border-left: 5px solid var(--accent);
+}
+
+/* Main Layout */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card p, .about-content {
+    padding: 1rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.about-content img {
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Course Filters and Display */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--primary);
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.course-badge {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--secondary); /* Incomplete */
+}
+
+/* Completed Course Indication */
+.course-badge.completed {
+    background-color: var(--primary); /* Escuro para o que já completou */
+}
+
+.credits-display {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.socials a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}

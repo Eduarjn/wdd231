@@ -1,0 +1,48 @@
+@media (min-width: 768px) {
+    /* Hide hamburger menu button */
+    #menu-button {
+        display: none;
+    }
+
+    /* Horizontal navigation */
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #menu li a {
+        border-bottom: none;
+        padding: 1rem 2rem;
+    }
+
+    #menu li a.active {
+        border-left: none;
+        border-bottom: 4px solid var(--accent);
+    }
+
+    /* Grid Layout for main content */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Make Certificate card span both columns */
+    .certificate-card {
+        grid-column: 1 / 3;
+    }
+
+    /* Align about content */
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    /* Courses laid out in a grid */
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+}
