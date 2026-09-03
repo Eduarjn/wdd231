@@ -44,15 +44,12 @@ header {
 }
 
 #menu-button {
-    flex-shrink: 0;
-}
-
-#menu-button {
     background: none;
     border: none;
     color: var(--white);
     font-size: 2rem;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 /* Navigation - Mobile (Hidden by default) */
