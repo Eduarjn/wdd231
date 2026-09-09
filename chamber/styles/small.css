@@ -15,7 +15,7 @@
   --heading-font: Georgia, "Times New Roman", serif;
   --body-font: "Open Sans", Arial, Helvetica, sans-serif;
 
-  --shadow: 0 1px 3px rgba(36, 27, 34, 0.18);
+  --shadow: 0 1px 3px #241b222e;
   --radius: 8px;
 }
 
@@ -120,7 +120,7 @@ nav {
   padding: 0.85rem 1rem;
   color: var(--cream);
   text-decoration: none;
-  border-bottom: 1px solid rgba(247, 243, 240, 0.18);
+  border-bottom: 1px solid #f7f3f02e;
 }
 
 #menu a:hover {
@@ -339,6 +339,6 @@ footer a:focus-visible {
   max-width: 64rem;
   margin: 1.25rem auto 0;
   padding-top: 1rem;
-  border-top: 1px solid rgba(247, 243, 240, 0.25);
+  border-top: 1px solid #f7f3f040;
   font-size: 0.9rem;
 }
