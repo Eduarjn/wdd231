@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="SJ logo">
+  <rect width="160" height="160" rx="18" fill="#e5ecd5"/>
+  <circle cx="80" cy="80" r="54" fill="#3b4a1f"/>
+  <text x="80" y="80" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="#e5ecd5">SJ</text>
+</svg>

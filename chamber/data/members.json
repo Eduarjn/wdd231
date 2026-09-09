@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "name": "Figueira Tech Solutions",
+      "tagline": "Cloud and network engineering for growing companies",
+      "address": "Rua Treze de Maio, 480 - Centro, Valinhos - SP",
+      "phone": "+55 19 3849-1120",
+      "website": "https://www.figueiratech.com.br",
+      "email": "contato@figueiratech.com.br",
+      "image": "images/figueira-tech.svg",
+      "membership": 3,
+      "founded": 2009
+    },
+    {
+      "name": "Casa do Figo Roxo",
+      "tagline": "Family orchard and fig preserves since 1962",
+      "address": "Estrada da Boa Esperanca, 2100 - Macuco, Valinhos - SP",
+      "phone": "+55 19 3871-4477",
+      "website": "https://www.casadofigoroxo.com.br",
+      "email": "vendas@casadofigoroxo.com.br",
+      "image": "images/casa-do-figo.svg",
+      "membership": 3,
+      "founded": 1962
+    },
+    {
+      "name": "Vale Verde Logistica",
+      "tagline": "Regional freight and warehousing on the Anhanguera corridor",
+      "address": "Rodovia Anhanguera, km 88 - Distrito Industrial, Valinhos - SP",
+      "phone": "+55 19 3512-8890",
+      "website": "https://www.valeverdelog.com.br",
+      "email": "operacoes@valeverdelog.com.br",
+      "image": "images/vale-verde.svg",
+      "membership": 2,
+      "founded": 1998
+    },
+    {
+      "name": "Padaria Sao Bento",
+      "tagline": "Wood-fired breads and coffee in the historic center",
+      "address": "Praca Sao Bento, 15 - Centro, Valinhos - SP",
+      "phone": "+55 19 3849-6032",
+      "website": "https://www.padariasaobento.com.br",
+      "email": "ola@padariasaobento.com.br",
+      "image": "images/padaria-sao-bento.svg",
+      "membership": 1,
+      "founded": 1974
+    },
+    {
+      "name": "Clinica Vida Plena",
+      "tagline": "Occupational health and preventive medicine",
+      "address": "Avenida Invernada, 950 - Vila Sao Jose, Valinhos - SP",
+      "phone": "+55 19 3829-2255",
+      "website": "https://www.clinicavidaplena.com.br",
+      "email": "agenda@clinicavidaplena.com.br",
+      "image": "images/vida-plena.svg",
+      "membership": 2,
+      "founded": 2005
+    },
+    {
+      "name": "Ateliê Bordado Fino",
+      "tagline": "Custom embroidery and uniforms for local business",
+      "address": "Rua Orozimbo Maia, 233 - Vila Sonia, Valinhos - SP",
+      "phone": "+55 19 3865-7719",
+      "website": "https://www.bordadofino.com.br",
+      "email": "atelie@bordadofino.com.br",
+      "image": "images/bordado-fino.svg",
+      "membership": 1,
+      "founded": 2016
+    },
+    {
+      "name": "Serra do Jardim Construtora",
+      "tagline": "Residential building and sustainable retrofits",
+      "address": "Avenida Doutor Antonio Carlos Couto de Barros, 1400 - Valinhos - SP",
+      "phone": "+55 19 3826-3300",
+      "website": "https://www.serradojardim.com.br",
+      "email": "obras@serradojardim.com.br",
+      "image": "images/serra-do-jardim.svg",
+      "membership": 3,
+      "founded": 1987
+    },
+    {
+      "name": "Cafe Colonial Recanto",
+      "tagline": "Afternoon colonial buffet and event space",
+      "address": "Rua Sao Sebastiao, 77 - Capela, Valinhos - SP",
+      "phone": "+55 19 3878-1045",
+      "website": "https://www.recantocolonial.com.br",
+      "email": "reservas@recantocolonial.com.br",
+      "image": "images/recanto-colonial.svg",
+      "membership": 2,
+      "founded": 2011
+    }
+  ]
+}
