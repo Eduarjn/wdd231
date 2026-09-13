@@ -1,5 +1,3 @@
-// Current weather and a 3-day forecast for Valinhos, using the OpenWeatherMap free API.
-// Get a free key at https://openweathermap.org/api and paste it below.
 const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
 const CITY = 'Valinhos,BR';
 const UNITS = 'metric';
@@ -62,8 +60,6 @@ function displayForecast(list) {
     });
 }
 
-// The forecast API returns readings every 3 hours; picking the one closest to
-// noon on each of the next three calendar days gives a simple daily forecast.
 function pickDailyNoon(list, days) {
     const today = new Date().toDateString();
     const seen = new Set();

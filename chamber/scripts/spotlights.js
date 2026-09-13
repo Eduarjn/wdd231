@@ -1,5 +1,3 @@
-// Home page member spotlights: 2-3 gold or silver members, chosen at random on every render.
-
 const spotlightContainer = document.getElementById('spotlight-cards');
 
 const membershipLabels = {
