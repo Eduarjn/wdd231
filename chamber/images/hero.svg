@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f3f0"/>
+      <stop offset="60%" stop-color="#e8c65a"/>
+      <stop offset="100%" stop-color="#d9ab3f"/>
+    </linearGradient>
+    <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b2c6f"/>
+      <stop offset="100%" stop-color="#40203a"/>
+    </linearGradient>
+    <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f5c46"/>
+      <stop offset="100%" stop-color="#15412f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#sky)"/>
+
+  <circle cx="960" cy="180" r="110" fill="#f7f3f0" opacity="0.85"/>
+
+  <path d="M0 320 Q 220 220 460 300 T 900 260 T 1200 300 V 675 H 0 Z" fill="url(#hillBack)" opacity="0.9"/>
+
+  <g fill="#40203a" opacity="0.95">
+    <rect x="120" y="360" width="60" height="140"/>
+    <rect x="195" y="330" width="50" height="170"/>
+    <rect x="260" y="380" width="70" height="120"/>
+    <polygon points="195,330 220,300 245,330"/>
+    <rect x="345" y="350" width="55" height="150"/>
+    <polygon points="345,350 372,320 400,350"/>
+    <rect x="415" y="390" width="45" height="110"/>
+  </g>
+
+  <path d="M0 420 Q 260 340 520 430 T 1000 400 T 1200 430 V 675 H 0 Z" fill="url(#hillFront)"/>
+
+  <g fill="#8a6a00" opacity="0.9">
+    <ellipse cx="240" cy="520" rx="70" ry="26"/>
+    <ellipse cx="700" cy="560" rx="90" ry="30"/>
+    <ellipse cx="980" cy="530" rx="75" ry="26"/>
+  </g>
+
+  <g fill="#1f5c46">
+    <ellipse cx="150" cy="560" rx="26" ry="18"/>
+    <ellipse cx="185" cy="555" rx="30" ry="20"/>
+    <ellipse cx="1050" cy="590" rx="28" ry="18"/>
+    <ellipse cx="90" cy="600" rx="24" ry="16"/>
+  </g>
+
+  <path d="M0 560 Q 300 500 600 580 T 1200 560 V 675 H 0 Z" fill="#15412f"/>
+</svg>
