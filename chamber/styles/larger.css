@@ -73,9 +73,42 @@
     grid-template-columns: 1.2fr 1fr 1fr;
     gap: 2rem;
   }
+
+  .join-grid {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .submit-button {
+    width: auto;
+  }
+
+  .summary {
+    max-width: 38rem;
+  }
+
+  .summary-list {
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1.5rem;
+    align-items: baseline;
+  }
+
+  .summary-list dt {
+    text-align: right;
+  }
+
+  .summary-list dd {
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media (min-width: 64rem) {
+  .level-cards {
+    grid-template-columns: 1fr;
+  }
+
   .header-content {
     gap: 1rem;
   }

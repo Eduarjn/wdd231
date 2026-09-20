@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Valinhos Chamber of Commerce</title>
+    <meta name="description" content="Membership application form for the Valinhos Chamber of Commerce in Sao Paulo, Brazil, with the benefits of the NP, Bronze, Silver, and Gold membership levels.">
+    <meta name="author" content="Eduarjose Nazareth Fajardo">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Facebook / Open Graph -->
+    <meta property="og:title" content="Join the Valinhos Chamber of Commerce">
+    <meta property="og:description" content="Membership application form for the Valinhos Chamber of Commerce in Sao Paulo, Brazil, with the benefits of the NP, Bronze, Silver, and Gold membership levels.">
+    <meta property="og:image" content="https://eduarjn.github.io/wdd231/chamber/images/valinhos-chamber-og.png">
+    <meta property="og:url" content="https://eduarjn.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/favicon.svg" alt="" width="44" height="44">
+            <p class="site-name">Valinhos Chamber<span>of Commerce</span></p>
+        </div>
+        <button id="menu-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Join the chamber</h1>
+        <p class="page-intro">Fill out the application below and our membership team will contact you within two business days.</p>
+
+        <div class="join-grid">
+            <section class="form-section" aria-labelledby="form-heading">
+                <h2 id="form-heading">Membership application</h2>
+
+                <form method="get" action="thankyou.html">
+                    <label>First name*
+                        <input type="text" name="first" title="Your first name" autocomplete="given-name" required>
+                    </label>
+
+                    <label>Last name*
+                        <input type="text" name="last" title="Your last name" autocomplete="family-name" required>
+                    </label>
+
+                    <label>Organizational title
+                        <input type="text" name="title" title="Your title inside your organization, at least seven letters" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+                        <span class="hint">Letters, hyphens, and spaces only. Minimum of seven characters.</span>
+                    </label>
+
+                    <label>Email*
+                        <input type="email" name="email" title="Your email address" autocomplete="email" placeholder="example@domain.com" required>
+                    </label>
+
+                    <label>Mobile phone*
+                        <input type="tel" name="phone" title="Your mobile phone number" autocomplete="mobile tel" required>
+                    </label>
+
+                    <label>Business or organization name*
+                        <input type="text" name="organization" title="The name of your business or organization" autocomplete="organization" required>
+                    </label>
+
+                    <label>Membership level*
+                        <select name="membership" title="Select the membership level you are applying for" required>
+                            <option value="">Select a level</option>
+                            <option value="np">NP membership (non profit, no fee)</option>
+                            <option value="bronze">Bronze membership</option>
+                            <option value="silver">Silver membership</option>
+                            <option value="gold">Gold membership</option>
+                        </select>
+                    </label>
+
+                    <label>Business or organization description
+                        <textarea name="description" title="Tell us briefly what your organization does" rows="5"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" value="Submit application" class="submit-button">
+                </form>
+            </section>
+
+            <section class="levels" aria-labelledby="levels-heading">
+                <h2 id="levels-heading">Membership levels</h2>
+
+                <div class="level-cards">
+                    <article class="level-card np">
+                        <h3>NP membership</h3>
+                        <p class="price">No fee</p>
+                        <p>For non profit organizations serving the Valinhos community.</p>
+                        <button type="button" class="level-link" data-modal="np-modal">View benefits</button>
+                    </article>
+
+                    <article class="level-card bronze">
+                        <h3>Bronze membership</h3>
+                        <p class="price">R$ 90 / month</p>
+                        <p>For small businesses taking their first steps with the chamber.</p>
+                        <button type="button" class="level-link" data-modal="bronze-modal">View benefits</button>
+                    </article>
+
+                    <article class="level-card silver">
+                        <h3>Silver membership</h3>
+                        <p class="price">R$ 180 / month</p>
+                        <p>For growing businesses that want more visibility.</p>
+                        <button type="button" class="level-link" data-modal="silver-modal">View benefits</button>
+                    </article>
+
+                    <article class="level-card gold">
+                        <h3>Gold membership</h3>
+                        <p class="price">R$ 320 / month</p>
+                        <p>For established businesses that want to lead the local economy.</p>
+                        <button type="button" class="level-link" data-modal="gold-modal">View benefits</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="np-modal" class="level-modal">
+            <h2>NP membership benefits</h2>
+            <ul>
+                <li>No membership fee for registered non profit organizations</li>
+                <li>Listing in the chamber directory</li>
+                <li>Access to all free chamber networking events</li>
+                <li>Monthly community newsletter</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="bronze-modal" class="level-modal">
+            <h2>Bronze membership benefits</h2>
+            <ul>
+                <li>Everything in the NP level</li>
+                <li>10% discount on chamber training workshops</li>
+                <li>Two event tickets per year</li>
+                <li>Business listing with logo in the directory</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="silver-modal" class="level-modal">
+            <h2>Silver membership benefits</h2>
+            <ul>
+                <li>Everything in the Bronze level</li>
+                <li>25% discount on chamber training workshops</li>
+                <li>Spotlight position on the chamber home page</li>
+                <li>One free stand at the annual fig harvest festival</li>
+                <li>Invitation to the quarterly business leaders lunch</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="gold-modal" class="level-modal">
+            <h2>Gold membership benefits</h2>
+            <ul>
+                <li>Everything in the Silver level</li>
+                <li>50% discount on chamber training workshops</li>
+                <li>Permanent spotlight position on the chamber home page</li>
+                <li>Logo on all chamber event materials</li>
+                <li>One sponsored article per year in the community newsletter</li>
+                <li>A seat on the chamber advisory board</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h2>Valinhos Chamber of Commerce</h2>
+                <address>
+                    Rua Treze de Maio, 320<br>
+                    Centro, Valinhos - SP, 13270-000<br>
+                    Brazil
+                </address>
+            </div>
+
+            <div>
+                <h2>Contact</h2>
+                <p><a href="mailto:info@valinhoschamber.org">info@valinhoschamber.org</a></p>
+                <p><a href="tel:+551938491234">+55 19 3849-1234</a></p>
+                <p>Monday to Friday, 9h - 17h</p>
+            </div>
+
+            <div>
+                <h2>Follow us</h2>
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.linkedin.com/in/eduarjose-fajardo" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Eduarjn" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12 0 1.53-.02 2.77-.02 3.15 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-legal">
+            <p>&copy; <span id="currentyear"></span> Valinhos Chamber of Commerce &mdash; Eduarjose Nazareth Fajardo &mdash; WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
