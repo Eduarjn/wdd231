@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Plan &ndash; Campinas Trails</title>
+  <meta name="description" content="Website planning document for Campinas Trails, a guide to hiking trails near Campinas, Brazil. WDD 231 final project site plan.">
+  <meta name="author" content="Eduar J Fajardo">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <h1>Site Plan</h1>
+    <p>WDD 231 final project &ndash; Eduar J Fajardo</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Site Name</h2>
+      <p class="site-name">Campinas Trails</p>
+      <p>
+        I chose this name because it says the two things a visitor needs to
+        know before clicking: where the trails are, and what the site is about.
+        Most people looking for a hike search for the name of their city first,
+        so putting Campinas in the name helps the site be found.
+      </p>
+      <p>Possible domain: <code>campinas-trails.com</code></p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>
+        Campinas Trails is a guide to hiking trails within about 80 kilometres
+        of Campinas, in the state of S&atilde;o Paulo, Brazil. People who live
+        here often do not know how many trails are close by, and the information
+        that exists is spread across social media posts and old blogs.
+      </p>
+      <p>The site will provide:</p>
+      <ul>
+        <li>
+          A list of trails, each one showing its distance, difficulty, walking
+          time, the city it is in, and whether dogs are allowed.
+        </li>
+        <li>
+          A filter so a visitor can narrow the list down to the kind of hike
+          they are looking for.
+        </li>
+        <li>
+          A way to save the trails they are interested in, so the list is still
+          there when they come back.
+        </li>
+        <li>
+          A form where visitors can suggest a trail that is missing from the
+          site.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Scenarios</h2>
+      <p>
+        These are questions a visitor would arrive with. The content of the site
+        has to answer them.
+      </p>
+      <ul>
+        <li>Which trails near Campinas can I finish in less than two hours?</li>
+        <li>Is there a trail where I can bring my dog?</li>
+        <li>I have never hiked before. Which trail should I start with?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Color Scheme</h2>
+      <p>
+        I picked colours that suit an outdoor site: a dark green for structure,
+        a warm clay tone for links and accents, and a soft cream background so
+        the pages do not feel harsh to read.
+      </p>
+
+      <table>
+        <caption>The four colours and where each one is used</caption>
+        <thead>
+          <tr>
+            <th scope="col">Colour</th>
+            <th scope="col">Hex</th>
+            <th scope="col">Where it is used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch swatch-forest"></span> Forest green</td>
+            <td><code>#2F5D3A</code></td>
+            <td>Header and footer background, headings, table headers</td>
+          </tr>
+          <tr>
+            <td><span class="swatch swatch-clay"></span> Clay</td>
+            <td><code>#A34E28</code></td>
+            <td>Links, the site name, and section borders</td>
+          </tr>
+          <tr>
+            <td><span class="swatch swatch-cream"></span> Cream</td>
+            <td><code>#FAF7F0</code></td>
+            <td>Page background</td>
+          </tr>
+          <tr>
+            <td><span class="swatch swatch-ink"></span> Ink</td>
+            <td><code>#262421</code></td>
+            <td>Body text and list items</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        I checked each pair with the WebAIM contrast checker so the text passes
+        the AA level.
+      </p>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <p>I am using two fonts, both from Google Fonts.</p>
+
+      <div class="font-sample sample-heading">
+        <p class="sample-text">Pico do Atibaia &ndash; 6 km, moderate</p>
+        <p>
+          <strong>Merriweather, bold.</strong> Used for all headings
+          (<code>h1</code>, <code>h2</code> and <code>h3</code>) and for the
+          site name. It is a serif face, which gives the titles a calmer feel
+          than a plain sans serif.
+        </p>
+      </div>
+
+      <div class="font-sample sample-body">
+        <p class="sample-text">Every paragraph, label and navigation link.</p>
+        <p>
+          <strong>Open Sans, regular and semibold.</strong> Used for body text,
+          navigation, table contents and the form labels. It stays readable at
+          small sizes on a phone, which matters because people will open this
+          site outdoors.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Wireframe</h2>
+      <p>
+        These are my sketches of the home page. On a small screen everything
+        sits in one column and the navigation collapses into a hamburger menu.
+        On a wider screen the navigation opens into a row and the trail cards
+        line up in a grid.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Small screen:</strong> header with the logo and a hamburger
+          menu, a hero image below it, a filter control, then the trail cards
+          stacked in a single column, and the footer at the bottom.
+        </li>
+        <li>
+          <strong>Large screen:</strong> the same header but with the
+          navigation links in a row, the hero image across the full width, the
+          filter in a horizontal bar, and the trail cards laid out in a three
+          column grid above the footer.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Eduar J Fajardo &ndash; WDD 231 &ndash; Valinhos, Brazil</p>
+  </footer>
+</body>
+</html>

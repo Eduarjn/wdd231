@@ -1,0 +1,190 @@
+/* WDD 231 - Site Plan - Campinas Trails - Eduar J Fajardo */
+
+:root {
+  --forest: #2f5d3a;
+  --clay: #a34e28;
+  --cream: #faf7f0;
+  --ink: #262421;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--cream);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--forest);
+}
+
+a {
+  color: var(--clay);
+}
+
+/* header and footer */
+header,
+footer {
+  background-color: var(--forest);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--white);
+}
+
+header p,
+footer p {
+  margin: 0.25rem 0 0;
+}
+
+/* main content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+section {
+  background-color: var(--white);
+  border-left: 5px solid var(--clay);
+  border-radius: 4px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+.site-name {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--clay);
+  margin: 0 0 0.5rem;
+}
+
+code {
+  background-color: var(--cream);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* colour table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+caption {
+  text-align: left;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+th,
+td {
+  border: 1px solid var(--forest);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--forest);
+  color: var(--white);
+}
+
+.swatch {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1rem;
+  border: 1px solid var(--ink);
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+.swatch-forest {
+  background-color: var(--forest);
+}
+
+.swatch-clay {
+  background-color: var(--clay);
+}
+
+.swatch-cream {
+  background-color: var(--cream);
+}
+
+.swatch-ink {
+  background-color: var(--ink);
+}
+
+/* typography samples */
+.font-sample {
+  background-color: var(--cream);
+  border-left: 4px solid var(--forest);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.sample-text {
+  font-size: 1.3rem;
+  margin: 0 0 0.3rem;
+  color: var(--forest);
+}
+
+.sample-heading .sample-text {
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 700;
+}
+
+.sample-body .sample-text {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.font-sample p:last-child {
+  margin-bottom: 0;
+}
+
+/* wireframes */
+.wireframes {
+  display: grid;
+  gap: 1.5rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ink);
+}
+
+figcaption {
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+/* wider screens */
+@media (min-width: 700px) {
+  .wireframes {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+  }
+}
