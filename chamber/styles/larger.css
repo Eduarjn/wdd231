@@ -121,3 +121,49 @@
     padding: 1.25rem;
   }
 }
+
+/* ==================================================================
+   Discover page - medium screens (641px to 1024px)
+   Two columns, with the first and the fourth card spanning the width.
+   ================================================================== */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* ==================================================================
+   Discover page - large screens (1025px and above)
+   Four columns, with the first card held as a two by two feature and
+   the last card running across two.
+   ================================================================== */
+
+@media (min-width: 1025px) {
+  .discover-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card3"
+      "card1 card1 card4 card5"
+      "card6 card7 card8 card8";
+  }
+}
+
+/* The image effect belongs to the pointer views only, never to mobile. */
+@media (min-width: 641px) {
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .discover-card:hover img,
+  .discover-card:focus-within img {
+    transform: scale(1.08);
+    filter: saturate(1.2) brightness(1.05);
+  }
+}
