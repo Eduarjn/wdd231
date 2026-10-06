@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All trails &ndash; Campinas Trails</title>
+  <meta name="description" content="Every trail in the Campinas collection, filtered by difficulty, by city and by whether dogs are allowed, with full details for each one.">
+  <meta name="author" content="Eduarjose Nazareth Fajardo">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="All trails &ndash; Campinas Trails">
+  <meta property="og:description" content="Every trail in the Campinas collection, filtered by difficulty, by city and by whether dogs are allowed.">
+  <meta property="og:image" content="https://eduarjn.github.io/wdd231/project/images/hero-trails.webp">
+  <meta property="og:url" content="https://eduarjn.github.io/wdd231/project/trails.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/final.css">
+  <script type="module" src="scripts/trails.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/favicon.svg" alt="" width="36" height="36">
+      <span>Campinas Trails</span>
+    </a>
+    <button id="menu-button" type="button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav aria-label="Main navigation">
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" aria-current="page" href="trails.html">Trails</a></li>
+        <li><a href="plan.html">Plan a hike</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>All trails</h1>
+    <p class="lead">
+      Narrow the list to what you can actually do this weekend. The filters
+      stay set when you come back.
+    </p>
+
+    <section class="panel filters" aria-labelledby="filter-heading">
+      <h2 id="filter-heading" class="sr-only">Filter the trails</h2>
+
+      <div class="field">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty" name="difficulty">
+          <option value="all">Any difficulty</option>
+          <option value="Easy">Easy</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="city">City</label>
+        <select id="city" name="city">
+          <option value="all">Any city</option>
+        </select>
+      </div>
+
+      <div class="field check-field">
+        <input type="checkbox" id="dogs-only" name="dogs-only">
+        <label for="dogs-only">Dogs allowed only</label>
+      </div>
+
+      <p class="note" id="result-count" role="status" aria-live="polite"></p>
+    </section>
+
+    <div class="trail-grid" id="trail-list"></div>
+  </main>
+
+  <dialog id="trail-dialog" aria-labelledby="dialog-title">
+    <button type="button" id="dialog-close" class="dialog-close" aria-label="Close">&#10005;</button>
+    <div id="dialog-body"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Campinas Trails &ndash; Eduarjose Nazareth Fajardo &ndash; WDD 231</p>
+      <p>
+        <a href="https://youtu.be/REPLACE-WITH-VIDEO-ID" target="_blank" rel="noopener">Project video</a>
+        &middot;
+        <a href="attributions.html">Attributions</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

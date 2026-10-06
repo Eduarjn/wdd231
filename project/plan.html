@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan a hike &ndash; Campinas Trails</title>
+  <meta name="description" content="Build a hike plan for a trail near Campinas: pick the trail and date, set the group size, and check the gear you still need to pack.">
+  <meta name="author" content="Eduarjose Nazareth Fajardo">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Plan a hike &ndash; Campinas Trails">
+  <meta property="og:description" content="Build a hike plan for a trail near Campinas: pick the trail and date, set the group size, and check your gear.">
+  <meta property="og:image" content="https://eduarjn.github.io/wdd231/project/images/hero-trails.webp">
+  <meta property="og:url" content="https://eduarjn.github.io/wdd231/project/plan.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/final.css">
+  <script type="module" src="scripts/plan.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/favicon.svg" alt="" width="36" height="36">
+      <span>Campinas Trails</span>
+    </a>
+    <button id="menu-button" type="button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav aria-label="Main navigation">
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a class="active" aria-current="page" href="plan.html">Plan a hike</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Plan a hike</h1>
+    <p class="lead">
+      Fill this in and the next page gives you a plan you can send to whoever
+      is coming with you.
+    </p>
+
+    <div class="plan-layout">
+      <section class="panel">
+        <h2>Your hike</h2>
+
+        <form id="plan-form" class="plan-form" action="confirm.html" method="get">
+          <p class="required-note">
+            Fields marked with <span class="req">*</span> are required.
+          </p>
+
+          <fieldset>
+            <legend>Who is going</legend>
+
+            <div class="field">
+              <label for="hiker-name">Your name <span class="req">*</span></label>
+              <input type="text" id="hiker-name" name="hikerName" maxlength="60"
+                     autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" maxlength="120"
+                     autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="group-size">People in the group <span class="req">*</span></label>
+              <input type="number" id="group-size" name="groupSize" min="1" max="30"
+                     step="1" value="2" required>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Where and when</legend>
+
+            <div class="field">
+              <label for="trail">Trail <span class="req">*</span></label>
+              <select id="trail" name="trail" required>
+                <option value="" disabled selected>Choose a trail ...</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="hike-date">Date <span class="req">*</span></label>
+              <input type="date" id="hike-date" name="hikeDate" required>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Experience <span class="req">*</span></legend>
+
+            <div class="radio-row">
+              <input type="radio" id="exp-first" name="experience" value="First hike" required>
+              <label for="exp-first">This is my first hike</label>
+            </div>
+            <div class="radio-row">
+              <input type="radio" id="exp-some" name="experience" value="A few hikes" required>
+              <label for="exp-some">I have done a few</label>
+            </div>
+            <div class="radio-row">
+              <input type="radio" id="exp-regular" name="experience" value="Regular hiker" required>
+              <label for="exp-regular">I hike regularly</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Gear you still need</legend>
+            <p class="hint">Check anything you do not already own.</p>
+
+            <div class="check-row">
+              <input type="checkbox" id="gear-boots" name="gear" value="Hiking boots">
+              <label for="gear-boots">Hiking boots</label>
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="gear-water" name="gear" value="Water bottle">
+              <label for="gear-water">Water bottle</label>
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="gear-rain" name="gear" value="Rain jacket">
+              <label for="gear-rain">Rain jacket</label>
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="gear-map" name="gear" value="Offline map">
+              <label for="gear-map">Offline map</label>
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="gear-light" name="gear" value="Headlamp">
+              <label for="gear-light">Headlamp</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="notes">Anything else</label>
+            <textarea id="notes" name="notes" rows="4" maxlength="400"
+                      placeholder="Driving from, meeting point, who has the car ..."></textarea>
+          </div>
+
+          <div class="actions">
+            <input type="submit" class="button" value="Build my plan">
+          </div>
+        </form>
+      </section>
+
+      <aside class="panel">
+        <h2>Packing by difficulty</h2>
+
+        <h3>Easy</h3>
+        <p>Water and sun protection. Trainers are enough on these surfaces.</p>
+
+        <h3>Moderate</h3>
+        <p>
+          Boots with ankle support, two litres of water per person, and a
+          jacket. The climb will take longer than the distance suggests.
+        </p>
+
+        <h3>Hard</h3>
+        <p>
+          Everything above plus food, a headlamp and an offline map. Tell
+          someone where you are going and when you expect to be back.
+        </p>
+
+        <h3>One rule for all three</h3>
+        <p>
+          Turn around at your planned time, not at the summit. The accidents
+          in this region happen on the way down, in the dark.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Campinas Trails &ndash; Eduarjose Nazareth Fajardo &ndash; WDD 231</p>
+      <p>
+        <a href="https://youtu.be/REPLACE-WITH-VIDEO-ID" target="_blank" rel="noopener">Project video</a>
+        &middot;
+        <a href="attributions.html">Attributions</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
